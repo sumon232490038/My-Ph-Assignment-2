@@ -2,23 +2,38 @@
 /* THIS IS "INTER" AND "MIAMA" GOOGLE FONT FAMILY */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.cdnfonts.com/css/miama');
+
+
 
 body {
-    margin: 0px;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 
 }
+
+
+/* SHARED CSS STYLE */
+.flex {
+    display: flex;
+}
+
+
+ .miama-fonts{
+    font-family: 'Miama', sans-serif;
+    font-size:4.8rem;
+    font-weight: 400;
+ }
+  
 
 /* THIS IS NAVIGATION BAR AND HEADER SECTION */
 
 
 .header-section{
-    height: 400px;
+    
     /* background-color: #383838; */
     background: linear-gradient(180deg, #111 0%, #383838 100%);
 
@@ -49,9 +64,7 @@ body {
     display: flex;
     color: #ffffff;
     list-style: none;
-    justify-content:center;
     align-items: center;
-    text-align: center;
     gap: 47px;
     padding: 4px 20px 4px 4px;
     border: 1px solid rgba(255, 255, 255, 0.10);
@@ -73,6 +86,71 @@ body {
     
     display: none;
 }
+
+
+/* THIS BANNER SECTION CSS */
+
+
+.banner-parent-container {
+   
+   justify-content:center;
+   gap: 290px;
+}
+.banner-details  {
+    width: 600px;
+}
+.banner-title {
+
+    font-weight: bold;
+    font-size: 4.8rem ;
+    color: #ffffff;
+    line-height: 120%;
+
+}
+
+.banner-description {
+ font-size: 1rem;  
+ font-weight: 300;
+ color:rgba(255, 255, 255, 0.50);
+ margin-top: -38px;
+ margin-bottom: 30px;
+
+ 
+}
+
+.join-btn {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 16px 40px;
+    border-radius: 42px;
+    border: none;
+    background-color: #E6533C;
+
+
+}
+.download-btn {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 16px 40px;
+    border-radius: 42px;
+    border: 1px solid #ffffff;
+    margin-left: 14px ;
+}
+
+
+.miama-fonts{
+    font-family: 'Miama', sans-serif;
+    font-size:8rem;
+    font-weight: 400;
+ }
+
+
+
+
+
 /* SMALL DEVICES RESPONSIVE CSS */
 
 @media screen and (max-width:576px) {
