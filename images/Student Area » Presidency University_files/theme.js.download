@@ -1,0 +1,79 @@
+
+
+/**
+ * Javascript for Default Theme
+ */
+$(document).ready(function(){
+    $("ul.sf-menu").supersubs({
+        minWidth:    12,                                // minimum width of sub-menus in em units
+        maxWidth:    27,                                // maximum width of sub-menus in em units
+        extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over
+    }).superfish({
+        delay:       400,                               // delay on mouseout
+        animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation
+        speed:       'fast',                            // faster animation speed
+        autoArrows:  false,                             // disable generation of arrow mark-up
+        dropShadows: false                              // disable drop shadows
+    });
+
+    // proover version 1: fixed height popover
+    var $popover = $('<div></div>').appendTo('body');
+
+    $popover.dialog({
+                autoOpen: false,
+                modal: true,
+                width: 1020,
+                height: 'auto',
+                dialogClass: 'dialog-popover'
+            });
+
+    $.popoverClose = function (){
+        $popover.dialog('close');
+    }
+
+    $.popover = function(url) {
+        $popover.load(url, function(){
+          $popover.dialog('open');
+
+          $('.popover-close').click(function(){
+                $popover.dialog('close');
+                return false;
+            });
+        });
+
+        return false;
+    };
+
+    // hook ajax links to popover
+    $.hookPopovers = function() {
+        $('.ajax-popover').click(function() {
+            $.popover(this.href);
+            return false;
+        });
+    };
+
+    $.hookPopovers();
+
+    $.ajaxForm = function(element, successCallback) {
+        element.submit(function(){
+            var formElement = $(this);
+
+            $.ajax({
+                        type: "POST",
+                        url: formElement.attr("action"),
+                        data: formElement.serialize(),
+                        dataType: "text/json",
+                        success: function(response) {
+                            successCallback(response);
+                        },
+                        error: function() {
+                            alert("Network Error! Please try again.");
+                        }
+
+                    });
+
+            return false;
+        })
+    }
+
+});

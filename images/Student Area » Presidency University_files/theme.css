@@ -1,0 +1,519 @@
+/**
+ * Basic
+ */
+body { font-family: "lucida grande", tahoma, verdana, arial, sans-serif; color: #444;}
+
+a { color: #000; text-decoration: none; border-bottom: 1px dashed #666}
+a:hover { color: #ff4b33; border: none; }
+
+p { line-height: 25px; font-size: 12px; }
+p + p { margin: 20px 0px 0px 0px; }
+
+h1 { font-family: Arial, sans-serif; font-size: 28px; color: #003D4C; margin-bottom: 10px}
+h2 { font-family: Arial, sans-serif; font-size: 24px; margin: 0px 0px 10px 0px; color: #003D4C; }
+h3, h4 { font-family: Arial, sans-serif; font-size: 20px; margin: 0px 0px 10px 0px; color: #003D4C; }
+h4{ font-size: 16px; margin-bottom: 0;}
+
+ul{
+    list-style: disc;
+    list-style-position:inside;
+    margin-bottom: 1em;
+}
+
+div.paging { text-align: center; margin: 30px; }
+
+#wrapper { border-top: 10px solid #444; }
+#wrapper { border-top: 10px solid #6D8C93; }
+
+
+/**
+ * Form
+ */
+form { margin: 10px 0px 0px 0px; }
+form label { display: block; font-weight: bold; }
+form .input { margin: 0px 0px 10px 0px; }
+form .text input,
+form .password input,
+form .textarea textarea { width: 300px; }
+form .error-message { color: #ee4b33; }
+
+
+/**
+ * Header
+ */
+#header{
+    background: url('../img/layout/bg.jpg');
+    height: 120px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+#header .site-logo{
+    display: block;
+    margin-top: 15px;
+}
+#header .site-tagline {
+    color: #666;
+    font-style: italic;
+    font-size: 13px;
+    display: block;
+    margin-top: -.5em;
+    margin-left: 38px;
+}
+#header .nav-status{
+    text-align: right;
+    font-size: .8em;
+}
+
+.nav-status a.logout, .nav-status a.settings, .nav-status a.signup, .nav-status a.login, .nav-status a.inbox{
+    border: none;
+    font-weight: bold;
+    padding-left: 22px;
+    margin-left: 10px;
+}
+
+
+.nav-status a.inbox{
+    background: url('../img/layout/mail.gif') left center no-repeat;
+    margin-left: 1em;
+}
+
+.nav-status a.settings{
+    background: url('../img/layout/edit.gif') left center no-repeat;
+}
+
+.nav-status a.logout{
+    color: #990000;
+    background: url('../img/layout/against.gif') left center no-repeat;
+}
+.nav-status a.signup{
+    background: url('../img/layout/key.gif') left center no-repeat;
+    margin-left: 1em;
+}
+
+.nav-status a.login{
+    background: url('../img/layout/lock.gif') left center no-repeat;
+}
+
+#header .nav-site-reference{
+    text-align: right; 
+    margin-top: 10px;
+    font-size: 11px;    
+}
+
+#header .nav-site-reference a{
+    display: inline-block;
+    background: #eee;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 5px 2em;
+}
+
+/**
+ * Navigation (with dropdown)
+ */
+#nav { border-bottom: 1px solid #ccc; margin-bottom: 40px; margin-top: 10px; height: 37px; }
+#nav ul li,
+#nav ul li a { float: left; display: block; background: #fff; }
+#nav ul li:first-child a { border-left: 1px solid #ccc; }
+#nav ul li a { color: #666; padding: 10px; border-top: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; text-decoration: none; }
+#nav ul li a:hover { background: #f7f7f7; }
+#nav ul li a.selected { border-bottom: 1px solid #fff; }
+#nav ul li a.selected:hover { background: #f7f7f7; border-bottom: 1px solid #ccc; }
+
+.sf-menu, .sf-menu * { margin:0; padding:0; list-style:none; }
+.sf-menu { line-height:1.0; }
+.sf-menu ul { position:absolute; top:-999em; width:10em; }
+.sf-menu ul li { width:100%; }
+.sf-menu li:hover { visibility:inherit; }
+.sf-menu li { float:left; position:relative; }
+.sf-menu a { display:block; position:relative; }
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul { left:0; top:2.5em; z-index:99; }
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul { top:-999em; }
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul { left:10em; top:0; }
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul { top:-999em; }
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul { left:10em; top:0; }
+
+#nav ul li:first-child ul { margin: -3px 0px 0px 0px; }
+#nav ul li ul { margin: -3px 0px 0px -1px; }
+#nav li li:first-child a { border-top: 1px solid #ccc; }
+#nav li li a { background: #f7f7f7; border-top: 0px solid #ccc; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; }
+#nav li li a:hover { color: #ff4b33; }
+
+#nav li li li:first-child { margin: 2px 0px 0px -1px; border-left: 0px solid #ccc; }
+#nav li li li { margin: 0px 0px 0px -1px; }
+
+.main-nav{
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.main-nav ul li a{
+    display: block;
+    padding: 5px 1em;
+    border-bottom: none;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.main-nav ul li a:hover{
+    background: #ddd;
+    color: #000;
+    background: #003D4C;
+    color: white;
+}
+
+.main-nav ul li a.selected{
+    background: #003D4C;
+    background: #6D8C93;
+    color: white;
+}
+
+.main-nav ul li ul{
+    border: 1px solid #ddd;
+    background: #eee;
+}
+
+.main-nav ul li ul li a{
+    margin-top: 0px;
+    padding: 8px 1em;
+}
+
+
+
+/**
+ * Main
+ */
+
+ #main{
+    font: 13px "lucida grande", tahoma, verdana, arial, sans-serif;
+    line-height:1.5;
+}
+
+.message { border: 2px dashed #eee; padding: 10px; margin: 0px 0px 10px 0px; }
+
+.nodes .node h2 { font-size: 26px; }
+
+.node { margin: 0px 0px 50px 0px; }
+.node h2 a { border-bottom: none; display: block; }
+.node h3 { margin: 10px 0px 10px 0px; }
+.node .node-info,
+.node .node-more-info { font-size: 13px; color: #666; font-style: italic; display: block; }
+.node .node-info a,
+.node .node-more-info a { font-style: normal; }
+.node .node-body { margin: 20px 0px 15px 0px; }
+.node .node-body ul { margin: 10px; }
+.node .node-body ul li { list-style-type: disc; margin: 0px 0px 0px 25px; }
+
+.comments h3 { margin: 50px 0px 10px 0px; }
+.comments .comment { border-top: 1px solid #f7f7f7; }
+.comments .comment .comment { margin: 0px 0px 0px 40px; }
+.comments .comment .comment-body { line-height: 20px; }
+
+.comment .comment-info { border-top: 1px solid #fff; background: #f7f7f7; display: block; height: 39px; }
+.comment .avatar { float: left; }
+.comment .avatar img { padding: 3px; }
+.comment .name { float: left; padding: 8px 0px 8px 10px; font-weight: bold; color: #000; }
+.comment .date { float: left; padding: 8px; color: #666; }
+.comment .comment-body { clear: both; font-size: 13px; padding: 10px 0px 3px 0px; }
+.comment .comment-reply { padding: 10px 5px 10px 0px; }
+.comment .comment-reply a { font-size: 11px; text-transform: lowercase; color: #000; background: #f7f7f7; padding: 5px; text-decoration: none; border-bottom: none;}
+.comment .comment-reply a:hover { background: #464646; color: #fff; }
+
+.comment-form h3 { margin: 50px 0px 10px 0px; }
+.form .comment-form h3 { margin: 0px 0px 10px 0px; }
+.comment-form p { padding: 10px 0px 20px 0px; }
+.comment-form #recaptcha_widget_div { margin: 0px 0px 10px 0px; }
+
+.block { margin: 0px 0px 30px 0px; font-size: 12px; }
+.block h3 { margin: 0px 0px 10px 0px; font-size: 20px; }
+.block .block-body { line-height: 25px; }
+.block ul li { list-style-type: disc; margin: 0px 0px 0px 25px; }
+
+.block-search input[type=text] { width: 200px; float: left; margin: 2px; }
+
+form .input{
+    border: 1px solid #eee;
+    background: #f5f5f5;
+    border: 1px solid #BDC7D8;
+    background: #ECEFF5;
+    padding: .5em 10px;
+    width: 320px;
+}
+form .textarea{
+    width: 520px;
+}
+form .textarea textarea{
+    width: 500px;
+}
+
+form div.submit{
+    padding: 0 10px;
+}
+
+form .form-hints{
+    color: #666;
+    font-size: .8em;
+}
+
+div.login{
+    padding: 2em 0 10em 0;
+    border-right: 1px solid #BDC7D8;
+}
+
+.login form{
+    border: 1px solid #BDC7D8;
+    background: #ECEFF5;
+    padding: 10px;
+    width: 240px;
+    display: block;
+}
+
+.login form .input input, .login form .input password{
+    width: 220px;
+}
+
+.login form .input, .login form .submit{
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+
+/**
+ * Footer
+ */
+#footer { border-top: 1px solid #ccc; margin-top: 50px; padding: 20px 0px 20px 0px; font-size: 11px; }
+#footer .right { text-align: right; }
+
+#debug-kit-toolbar ul li.panel-tab { display: none; }
+#debug-kit-toolbar ul li.icon { display: inline; }
+
+.margin-t10{
+    margin-top: 10px;
+}
+
+.margin-t20{
+    margin-top: 20px;
+}
+
+.margin-t30{
+    margin-top: 30px;
+}
+
+a.impress {
+    display: inline-block;
+    border: 1px solid yellow;
+    background: orange;
+    padding: .3em 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.hints, .h4-hints{
+    display:block;
+    color: #666;
+    font-size: .85em;
+    margin-bottom: 2em;
+    margin-top: -16px;
+}
+
+.h4-hints{
+    margin-top: -4px;
+}
+
+
+.profile .item{
+        border-bottom: 1px solid #eee;
+        padding: .5em 0;
+    }
+    .profile .item-head{
+        padding: .5em 1em;
+        background: transparent url(img/layout/bg.jpg) repeat;
+        border-bottom: 1px solid #ddd;
+    }
+    .profile .item-head h3, .profile-headline{
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    }
+
+    .profile-headline{
+        font-size: 18px;
+        margin-bottom: 1em;
+        color:#D95201;
+    }
+
+    .profile .item .item-name{
+        text-align: right;
+    }
+
+    .profile .item .item-value{
+        color: #000;
+    }
+
+    .profile .item-section{
+        margin-bottom: 2em;
+    }
+
+    .page-headline{
+        padding: 5px 10px;
+        background: #ECEFF5;
+        margin: 5px 0;
+        border: 1px #ABC6DD solid;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        font-size: 20px;
+        color: #6D8C93;
+    }
+
+    .page-headline span{
+        color: darkolivegreen;
+    }
+
+
+
+    /**
+     * Degree Applications
+     */
+    .degreeApplications{ background: #F5F5F5; box-shadow: 1px 1px 2px #999; border-radius: 3px; }
+
+    .degreeApplications .convocotation-header{padding: 30px; color: #888; margin-bottom: 0;}
+    .degreeApplications .convocotation-header h2{color: #555; line-height: 1.5em; margin: 0;}
+    .degreeApplications .convocotation-header h3{color: #888; font-size: 16px; line-height: 1.5em; margin: 0;}
+
+    .degreeApplications .form-content{background: #F8F8F8; padding: 30px; border-top: 1px solid #CCCCCC; }
+    .degreeApplications form{margin-top: 0;}
+
+    .degreeApplications form .input{background: none; border: none;}
+    .degreeApplications form .textarea{width: auto;}
+    .degreeApplications form .textarea textarea{height: 100px;}
+
+    .degreeApplications form .text input, .degreeApplications form .textarea textarea{width: 350px; border: 1px solid #DDD; color: #888; font-size: 18px; line-height: 1.5em; padding: 8px; border-radius: 3px;}
+
+    .degreeApplications form .radio{width: 600px;}
+    .degreeApplications form .radio legend{display: inline-block; color: #333; font-weight: bold; padding-bottom: 10px;}
+    .degreeApplications form .radio input{display: inline-block; padding-left: 10px}
+    .degreeApplications form .radio label{display: inline-block; color: #333; font-weight: normal; padding-right: 20px; padding-left: 10px;}
+
+    .degreeApplications form .checkbox{width: 600px;}
+    .degreeApplications form .checkbox label{display: inline-block; color: #333; padding-left: 10px;}
+
+    .degreeApplications form .form-footer{border-top: 1px solid #CCC; padding-top: 30px;}
+    .degreeApplications form .submit input{font-size: 18px; padding: 10px 25px; color: #FFF; background: #00ADEE; border: 1px solid #FFF; border-radius: 3px;}
+    .form-buttons input, .form-buttons a{display: inline-block; font-size: 18px; padding: 10px 25px; color: #FFF; background: #00ADEE; border: 1px solid #FFF; border-radius: 3px; margin-right: 10px;}
+
+
+    .degreeApplications .form-terms{padding: 30px; background: #FFF; border-top: 1px solid #CCC;}
+
+    .degreeApplications .form-terms, .degreeApplications .form-terms p, .degreeApplications .form-terms ol li{line-height: 1.65em; font-size: 13px; color: #333;}
+    .degreeApplications .form-terms h3{color: #333;}
+    .degreeApplications .form-terms h4{color: #333; font-size: 15px; padding-bottom: .5em; margin-top: 1.5em; text-decoration: underline}
+    .degreeApplications .form-terms ol li{list-style-type: decimal; list-style-position: inside; font-size: 13px; margin-bottom: 10px;}
+
+    .degreeApplications .form-terms-fee-table{width: 600px; margin: auto;}
+    .degreeApplications .form-terms-fee-table td, .degreeApplications .form-terms-fee-table th{font-size: 13px; padding: 5px 10px;}
+
+    .degreeApplications .form-content span.text, .degreeApplications .form-content span.textarea{background: #FFF; font-size: 14px; font-weight: bold; display: inline-block; margin-top: 5px; width: 350px; padding: 8px 15px; border: 1px dashed #ccc; border-radius: 3px;}
+
+    .degreeApplications .form-fee-table{width: 600px; padding-left: 10px;}
+    .degreeApplications .form-fee-table td, .degreeApplications .form-fee-table th{font-size: 13px; padding: 5px 10px;}
+    .degreeApplications .form-fee-table tfoot td{font-weight: bold; border-top: 1px dotted #333;}
+
+    .degreeApplications .signature-line{border-top: 1px dotted #333; text-align: center; margin-top: 50px;}
+
+    .degreeApplications .application-image-widget{display: inline-block; position: absolute; margin-top: -160px; margin-left: 230px; }
+    .degreeApplications .application-image-widget img{background: #FFF; width: 160px; margin: 0; padding: 5px; border: 1px solid #DDD; box-shadow: 1px 2px 2px #aaa;}
+
+    .page-break{border-top: 1px dashed #999;}
+
+    .degreeApplications .form-content-print div.input label{color: #666; font-style: italic; font-weight: normal;}
+    .degreeApplications .form-content-print div.input .text, .degreeApplications .form-content-print div.input .textarea{background: none; padding: 0; border: 0; padding-left: 10px; margin-top: 5px;}
+
+    .degreeApplications .form-official-table{width: auto; padding-left: 10px;}
+    .degreeApplications .form-official-table .tick-box{height: 15px; width: 15px; display: inline-block; margin: 0 10px; border: 1px solid #666; vertical-align: middle;}
+
+    @media print{
+        .degreeApplications{box-shadow: none; border: none;}
+        .degreeApplications .convocotation-header-rest{border-top: 1px solid #ccc;}
+        .degreeApplications .application-image-widget img{box-shadow: none;}
+    }
+	
+	.onlineApplications{ background: #F5F5F5; box-shadow: 1px 1px 2px #999; border-radius: 3px; }
+
+    .onlineApplications .convocotation-header{padding: 30px; color: #888; margin-bottom: 0;}
+    .onlineApplications .convocotation-header h2{color: #555; line-height: 1.5em; margin: 0;}
+    .onlineApplications .convocotation-header h3{color: #888; font-size: 16px; line-height: 1.5em; margin: 0;}
+
+    .onlineApplications .form-content{background: #F8F8F8; padding: 20px; border-top: 1px solid #CCCCCC; }
+	.onlineApplications .form-educontent{background: #F8F8F8; padding: 20px; border-top: 1px solid #CCCCCC; }
+    .onlineApplications form{margin-top: 0;}
+	
+	.onlineApplications .section{padding-bottom:1em}
+	.onlineApplications .section_title{font-size: medium;color:#595555;}
+	
+    .onlineApplications form .input{background: none; border: none;}
+    .onlineApplications form .textarea{width: auto;}
+    .onlineApplications form .textarea textarea{height: 100px;}
+
+    .onlineApplications form .text input, .onlineApplications form .textarea textarea{width: 350px; border: 1px solid #DDD; color: #888; font-size: 18px; line-height: 1.5em; padding: 3px; border-radius: 3px;}
+
+    .onlineApplications form .radio{width: 600px;}
+    .onlineApplications form .radio legend{display: inline-block; font-weight: bold; padding-bottom: 10px;}
+    .onlineApplications form .radio input{display: inline-block; padding-left: 10px}
+    .onlineApplications form .radio label{display: inline-block; color: #333; font-weight: normal; padding-right: 20px; padding-left: 10px;}
+
+    .onlineApplications form .checkbox{width: auto;}
+    .onlineApplications form .checkbox label{display: inline-block; color: #333; padding-left: 10px;}
+    .onlineApplications .checkspan{display: inline-block; color: #333; font-weight:bold;padding-left: 10px;}
+	
+    .onlineApplications form .form-footer{border-top: 1px solid #CCC; padding-top: 30px;}
+    .onlineApplications form .submit input{font-size: 18px; padding: 10px 25px; color: #FFF; background: #00ADEE; border: 1px solid #FFF; border-radius: 3px;}
+    .form-buttons input, .form-buttons a{display: inline-block; font-size: 18px; padding: 10px 25px; color: #FFF; background: #00ADEE; border: 1px solid #FFF; border-radius: 3px; margin-right: 10px;}
+
+
+    .onlineApplications .form-terms{padding: 30px; background: #FFF; border-top: 1px solid #CCC;}
+
+    .onlineApplications .form-terms, .onlineApplications .form-terms p, .onlineApplications .form-terms ol li{line-height: 1.65em; font-size: 13px; color: #333;}
+    .onlineApplications .form-terms h3{color: #333;}
+    .onlineApplications .form-terms h4{color: #333; font-size: 15px; padding-bottom: .5em; margin-top: 1.5em; text-decoration:none}
+    .onlineApplications .form-terms ol li{list-style-type: decimal; list-style-position: inside; font-size: 13px; margin-bottom: 10px;}
+
+    .onlineApplications .form-terms-fee-table{width: 600px; margin: auto;}
+    .onlineApplications .form-terms-fee-table td, .onlineApplications .form-terms-fee-table th{font-size: 13px; padding: 5px 10px;}
+
+    .onlineApplications .form-content span.text, .onlineApplications .form-content span.textarea{background: #FFF; font-size: 14px; font-weight: bold; display: inline-block; margin-top: 5px; width: 350px; padding: 8px 15px; border: 1px dashed #ccc; border-radius: 3px;}
+	
+	.onlineApplications .convocotation-header > .input{margin:0!important;padding:0!important;}	
+	.onlineApplications_semstitle{background:#F5F5F5!important; border:0 none!important;color: #555555!important;line-height: 1.5em!important;margin: 0!important;font-family: Arial,sans-serif!important;font-size: 24px!important;font-weight:bold!important;padding:0!important;}
+	
+    .onlineApplications .form-fee-table{width: 600px; padding-left: 10px;}
+    .onlineApplications .form-fee-table td, .onlineApplications .form-fee-table th{font-size: 13px; padding: 5px 10px;}
+    .onlineApplications .form-fee-table tfoot td{font-weight: bold; border-top: 1px dotted #333;}
+
+    .onlineApplications .signature-line{border-top: 1px dotted #333; text-align: center; margin-top: 50px;}
+
+    .onlineApplications .application-image-widget{display: inline-block; position: absolute; margin-left: 230px; }
+    .onlineApplications .application-image-widget img{background: #FFF; width: 160px; margin: 0; padding: 5px; border: 1px solid #DDD; box-shadow: 1px 2px 2px #aaa;}
+
+    .page-break{border-top: 1px dashed #999;}
+
+    .onlineApplications .form-content-print div.input label{color: #666; font-style: italic; font-weight: normal;}
+    .onlineApplications .form-content-print div.input .text, .onlineApplications .form-content-print div.input .textarea{background: none; padding: 0; border: 0; padding-left: 10px; margin-top: 5px;}
+
+    .onlineApplications .form-official-table{width: auto; padding-left: 10px;}
+    .onlineApplications .form-official-table .tick-box{height: 15px; width: 15px; display: inline-block; margin: 0 10px; border: 1px solid #666; vertical-align: middle;}
+
+    @media print{
+        .onlineApplications{box-shadow: none; border: none;}
+        .onlineApplications .convocotation-header-rest{border-top: 1px solid #ccc;}
+        .onlineApplications .application-image-widget img{box-shadow: none;}
+    }	
